@@ -10,6 +10,12 @@ classical media-forensics signals (Error Level Analysis, frequency-domain
 analysis, noise residual, EXIF inspection) so you can see *which* signals
 fired and *why* — and treat the result as evidence rather than an oracle.
 
+![Demo — forged input with ELA, FFT and noise-residual heatmaps](docs/demo.png)
+
+> Above: a synthetic splice (the red rectangle) is detected by Error Level
+> Analysis — the red border in the top-right panel traces the edited region.
+> Reproduce with `uv run python scripts/make_demo.py`.
+
 Ships with:
 
 - A **CLI** — `detect`, `batch`, `train`, `evaluate`
