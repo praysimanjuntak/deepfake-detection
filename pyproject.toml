@@ -1,0 +1,44 @@
+[project]
+name = "deepfake-detection"
+version = "0.1.0"
+description = "Deepfake and image-forgery detection — pretrained classifier + classical forensics."
+readme = "README.md"
+authors = [
+    { name = "Pray Apostel", email = "simanjuntakpray@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.3.3",
+    "datasets>=4.8.5",
+    "gradio>=6.13.0",
+    "numpy>=2.4.4",
+    "opencv-python>=4.13.0.92",
+    "pillow>=12.2.0",
+    "rich>=15.0.0",
+    "scikit-learn>=1.8.0",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "transformers>=5.7.0",
+]
+
+[project.scripts]
+deepfake-detection = "deepfake_detection:main"
+deepfake-detection-app = "deepfake_detection.app:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["uv_build>=0.8.13,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.15.12",
+]
