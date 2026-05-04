@@ -9,8 +9,12 @@ wheels/
 # Virtual environments
 .venv
 
-# Model checkpoints (regenerate with `uv run deepfake-detection train`)
-checkpoints/
+# Model checkpoints (regenerate with `uv run deepfake-detection train`).
+# The published benchmark checkpoint is whitelisted so the repo is
+# clone-and-run; experimental runs that overwrite different filenames stay
+# out of git.
+checkpoints/*
+!checkpoints/smallresnet_cifake.pt
 
 # macOS
 .DS_Store

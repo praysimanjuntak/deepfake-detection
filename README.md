@@ -125,9 +125,9 @@ report.to_dict()
 
 ## Training a custom model
 
-The repo includes a small ResNet-style CNN (~270k params) and a CIFAKE
-loader so you can train and benchmark a custom detector against the
-forensics pipeline.
+The repo includes a small ResNet-style CNN (~270k params), a CIFAKE
+loader, and a **pretrained checkpoint** at `checkpoints/smallresnet_cifake.pt`
+(1.1 MB) so `evaluate` works clone-and-go without retraining.
 
 ```bash
 # Quick smoke test (~30s on CPU)
